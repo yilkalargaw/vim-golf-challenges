@@ -1,4 +1,4 @@
-* vim-golf-challanges
+* vim-golf-challenges
 All(almost all the vimgolf challenges in one org file)
 
 This all the vim golf challenges that are scraped from [[vimgolf.com][vimgolf.com]].

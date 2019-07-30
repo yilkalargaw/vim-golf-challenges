@@ -5,7 +5,7 @@ This all the vim golf challenges that are scraped from [[vimgolf.com][vimgolf.co
 I scraped and put them in a single org file because I am used to the format. I think
 the challanges are good for any one working with any editor.
 
-[[https://github.com/yilkalargaw/vim-golf-challanges/blob/master/vimgolf.org][the challanges]]
+[[https://github.com/yilkalargaw/vim-golf-challenges/blob/master/vimgolf.org][the challenges]]
 
 NB. the additional line break at the bottom of the End File section are accidental I hope to
 correct it in the future.

@@ -6,3 +6,6 @@ I scraped and put them in a single org file because I am used to the format. I t
 the challanges are good for any one working with any editor.
 
 [[https://github.com/yilkalargaw/vim-golf-challanges/blob/master/vimgolf.org][the challanges]]
+
+NB. the additional line break at the bottom of the End File section are accidental I hope to
+correct it in the future.

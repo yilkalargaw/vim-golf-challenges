@@ -1,5 +1,7 @@
 #+TITLE: Vimgolf Challenges
 
+* vim-golf-challenges
+>>>>>>> 80e55a4... Update README.org
 Almost all(i.e. at the time of writing) the vimgolf challenges in one org file
 
 This all the vim golf challenges that are scraped from [[vimgolf.com][vimgolf.com]].
@@ -7,6 +9,7 @@ I scraped and put them in a single org file because I am used to the format. I t
 the challanges are good for any one working with any editor.
 
 * table of contents                                                     :TOC_1:
+- [[#vim-golf-challenges][vim-golf-challenges]]
 - [[#box-it][Box it]]
 - [[#simple-practical-and-common][Simple, Practical, and Common]]
 - [[#ninja-substitution][ninja substitution]]

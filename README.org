@@ -1,13 +1,5 @@
 #+TITLE: Vimgolf Challenges
 
-<<<<<<< HEAD
-* vim-golf-challenges
-<<<<<<< HEAD
->>>>>>> 80e55a4... Update README.org
-=======
->>>>>>> dec27b8... removed the merge conflict data
-=======
->>>>>>> 8239bf3... remove the double title
 Almost all(i.e. at the time of writing) the vimgolf challenges in one org file
 
 This all the vim golf challenges that are scraped from [[vimgolf.com][vimgolf.com]].

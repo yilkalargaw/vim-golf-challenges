@@ -505,6 +505,23 @@ the challanges are good for any one working with any editor.
 - [[#enumerate-bullets][Enumerate Bullets]]
 - [[#hs-final-exam-vimgolf][HS Final exam vimgolf]]
 - [[#python-dataclasses][Python dataclasses]]
+- [[#rust-cargotoml-version-to-last][RUST Cargo.toml version to last]]
+- [[#generate-a-very-basic-python-constructor][Generate a very basic Python constructor]]
+- [[#rust-match-with-enum-for-coin][RUST match with enum for Coin]]
+- [[#staircase][Staircase]]
+- [[#put-a-cross-in-the-square][Put a cross in the square]]
+- [[#easy-modification-of-ssh-config][Easy modification of ssh config]]
+- [[#change-double-quotes-to-single-quotes-but-with-a-twist][Change double quotes to single quotes, but with a twist]]
+- [[#extend-shell-script][Extend shell script]]
+- [[#대법원-인명용-한자-바인딩combine-hangul-and-chinese-characters][대법원 인명용 한자 바인딩(Combine Hangul and Chinese characters)]]
+- [[#making-3-line-function-a-one-liner][Making 3 line function a one liner.]]
+- [[#c-to-python-code-snippet][C to python code snippet]]
+- [[#tables-functions-sprocs][Tables, Functions, Sprocs]]
+- [[#count-to-100-in-word-form][Count to 100 in word form]]
+- [[#mr-hacker][Mr. Hacker]]
+- [[#comparing-schema-with-diff][Comparing Schema With Diff]]
+- [[#simple-maths-2][Simple Maths 2]]
+- [[#rust-html-to-maud][RUST HTML to maud.]]
 
 * Box it
 Create a box around a line.
@@ -24575,5 +24592,1129 @@ class Student:
     score: float
 
 fields = "student_id,name,age,score"
+#+end_src
+
+* RUST Cargo.toml version to last
+
+RUST Cargo.toml version to last. rusty practice on vimgolf
+
+** Start file
+
+#+begin_src
+[package]
+name = "rust-web"
+version = "0.1.0"
+authors = ["The Rust Developers"]
+edition = "2018"
+
+[dependencies]
+lazy_static = "1.2.0"
+fluent = "0.13"
+fluent-bundle = "0.6.0"
+fluent-syntax = "0.10.0"
+fluent-locale = "0.10.1"
+handlebars-fluent = "0.2.0"
+rand = "0.8"
+regex = "1"
+rocket = "0.4.6"
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.8.14"
+sass-rs = "0.2.1"
+reqwest = { version = "0.10.10", features = ["blocking", "json"] }
+toml = "0.5"
+serde_json = "1.0"
+rust_team_data = { git = "https://github.com/rust-lang/team" }
+handlebars = "1.1.0"
+siphasher = "0.3.3"
+percent-encoding = "2.1.0"
+
+[dependencies.rocket_contrib]
+version = "0.4"
+default-features = false
+features = ["handlebars_templates"]
+#+end_src
+
+** End file
+
+#+begin_src
+[package]
+name = "rust-web"
+version = "0.1.0"
+authors = ["The Rust Developers"]
+edition = "2018"
+
+[dependencies]
+lazy_static = "*"
+fluent = "*"
+fluent-bundle = "*"
+fluent-syntax = "*"
+fluent-locale = "*"
+handlebars-fluent = "*"
+rand = "*"
+regex = "*"
+rocket = "*"
+serde = { version = "*", features = ["derive"] }
+serde_yaml = "*"
+sass-rs = "*"
+reqwest = { version = "*", features = ["blocking", "json"] }
+toml = "*"
+serde_json = "*"
+rust_team_data = { git = "https://github.com/rust-lang/team" }
+handlebars = "*"
+siphasher = "*"
+percent-encoding = "*"
+
+[dependencies.rocket_contrib]
+version = "*"
+default-features = false
+features = ["handlebars_templates"]
+#+end_src
+
+* Generate a very basic Python constructor
+
+I actually needed to do this myself, so I look forward to learning how.
+
+** Start file
+
+#+begin_src
+def __init__(self, x, y, z, rotation, color, bounciness, walking_speed, running_speed, health, defense, age, type1, type2):
+#+end_src
+
+** End file
+
+#+begin_src
+def __init__(self, x, y, z, rotation, color, bounciness, walking_speed, running_speed, health, defense, age, type1, type2):
+    self.x = x
+    self.y = y
+    self.z = z
+    self.rotation = rotation
+    self.color = color
+    self.bounciness = bounciness
+    self.walking_speed = walking_speed 
+    self.running_speed = running_speed
+    self.health = health
+    self.defense = defense
+    self.age = age 
+    self.type1 = type1
+    self.type2 = type2
+#+end_src
+
+* RUST match with enum for Coin
+RUST match with enum for Coin rusty practice on vimgolf
+
+** Start file
+
+#+begin_src
+enum Coin {
+        Penny,
+        Nickel,
+        Dime,
+        Quarter,
+}
+#+end_src
+
+** End file
+
+#+begin_src
+enum Coin {
+        Penny,
+        Nickel,
+        Dime,
+        Quarter,
+}
+
+fn value_in_cents(coin: Coin) -> u32 {
+        match coin {
+                Coin::Penny => 1,
+                Coin::Nickel => 5,
+                Coin::Dime => 10,
+                Coin::Quarter => 25,
+        }
+}
+#+end_src
+
+* Staircase
+Going downstairs, while singing the alphabet song. Some vb practice to us all. Would it be much easier to make it go from left to right instead?
+
+** Start file
+
+#+begin_src 
+                         A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+#+end_src
+
+** End file
+
+#+begin_src
+                         A
+                        BB
+                       CCC
+                      DDDD
+                     EEEEE
+                    FFFFFF
+                   GGGGGGG
+                  HHHHHHHH
+                 IIIIIIIII
+                JJJJJJJJJJ
+               KKKKKKKKKKK
+              LLLLLLLLLLLL
+             MMMMMMMMMMMMM
+            NNNNNNNNNNNNNN
+           OOOOOOOOOOOOOOO
+          PPPPPPPPPPPPPPPP
+         QQQQQQQQQQQQQQQQQ
+        RRRRRRRRRRRRRRRRRR
+       SSSSSSSSSSSSSSSSSSS
+      TTTTTTTTTTTTTTTTTTTT
+     UUUUUUUUUUUUUUUUUUUUU
+    VVVVVVVVVVVVVVVVVVVVVV
+   WWWWWWWWWWWWWWWWWWWWWWW
+  XXXXXXXXXXXXXXXXXXXXXXXX
+ YYYYYYYYYYYYYYYYYYYYYYYYY
+ZZZZZZZZZZZZZZZZZZZZZZZZZZ
+#+end_src
+
+* Put a cross in the square
+Put a cross in the square
+
+** Start file
+
+#+begin_src
+--------
+|      |
+|      |
+|      |
+|      |
+|      |
+|      |
+--------
+#+end_src
+
+** End file
+
+#+begin_src
+--------
+|\    /|
+| \  / |
+|  \/  |
+|  /\  |
+| /  \ |
+|/    \|
+--------
+#+end_src
+
+* Easy modification of ssh config
+Just add another alias to each worker
+
+** Start file
+
+#+begin_src
+host master
+  hostname 10.0.10.8
+
+host 65
+  hostname 10.0.10.17
+
+host ef
+  hostname 10.0.10.10
+
+host gp
+  hostname 10.0.10.27
+
+host h5
+  hostname 10.0.10.13
+
+host sa
+  hostname 10.0.10.25
+
+host sv
+  hostname 10.0.10.12
+#+end_src
+
+** End file
+
+#+begin_src
+host master
+  hostname 10.0.10.8
+
+host 65 worker1
+  hostname 10.0.10.17
+
+host ef worker2
+  hostname 10.0.10.10
+
+host gp worker3
+  hostname 10.0.10.27
+
+host h5 worker4
+  hostname 10.0.10.13
+
+host sa worker5
+  hostname 10.0.10.25
+
+host sv worker6
+  hostname 10.0.10.12
+#+end_src
+
+* Change double quotes to single quotes, but with a twist
+Although this challenge is in the context of a Python function, you don't need to know Python to do this challenge. It is to add contexts and interesting constraints. The file contains a function that prints a multi-line string literal. I wrote the string literal with double quotes, but then I decided to use single quotes instead, and that's your challenge. However, interestingly enough, the string itself contains single and double quotes. This means, inside the string literal, the originally escaped double quotes no longer need to be escaped, but the single quotes now need to be escaped. Note that the triple double quotes in the docstring should be left alone.
+
+** Start file
+
+#+begin_src
+def some_python_function():
+    """
+    This is a Python docstring. It describes what a function does.
+    The triple quotes above and below me do not need to be changed.
+    """
+
+    print(
+        "The Gryphon added, \"Come, let's hear some of YOUR adventures.\" "
+        "\"I could tell you my adventures - beginning from this morning,\" "
+        "said Alice a little timidly: \"but it's no use going back to yesterday, "
+        "because I was a different person then.\""
+    )
+#+end_src
+
+** End file
+
+#+begin_src
+def some_python_function():
+    """
+    This is a Python docstring. It describes what a function does.
+    The triple quotes above and below me do not need to be changed.
+    """
+
+    print(
+        'The Gryphon added, "Come, let\'s hear some of YOUR adventures." '
+        '"I could tell you my adventures - beginning from this morning," '
+        'said Alice a little timidly: "but it\'s no use going back to yesterday, '
+        'because I was a different person then."'
+    )
+#+end_src
+
+* Extend shell script
+Just add some more stuff
+
+** Start file
+
+#+begin_src
+helm uninstall -n pcc-1 pcc-1
+kubectl delete ns pcc-1
+cd ~/helm-install/pcc-1/
+./helm-install-1.6.sh
+#+end_src
+
+** End file
+
+#+begin_src
+helm uninstall -n pcc-1 pcc-1
+helm uninstall -n pcg-1 pcg-1
+helm uninstall -n pcg-2 pcg-2
+kubectl delete ns pcc-1
+kubectl delete ns pcg-1
+kubectl delete ns pcg-2
+cd ~/helm-install/pcc-1/
+./helm-install-1.6.sh
+cd ~/helm-install/pcg-1/
+./helm-install-1.1.sh
+cd ~/helm-install/pcg-2/
+./helm-install-1.1.sh
+#+end_src
+
+* 대법원 인명용 한자 바인딩(Combine Hangul and Chinese characters)
+The character system of Chinese characters has caused difficulties in character encoding for a long time. The content is to link the Korean name and the corresponding Chinese character. input is simply pasted Chinese table, and you need to make it in json format. Most of them are omitted because there are too many Chinese characters, but I think it's better to work from "가" to "힐". There are a few rules here. 1. One Hangul must correspond to multiple Chinese characters. 2. In the case of "a(b c)", "a" is a redundant Chinese character, so you must remove "a" and use only "b c". 3. There are some characters here that don't appear to be an encoding issue, but they should all be used. 4. Should follow json format, Chinese characters are arrays. 문자인코딩의 역사속에서 한문은 여러가지 난제를 만들어왔습니다. 이 문제는 대법원 인명용 한자를 바인딩하는 것입니다. input은 단순히 인명용한자 표를 붙여넣기 한 것이며, 이것을 json형식으로 만들어야합니다. 한자가 너무 많은 관계로 대부분을 생략하였으나, 기본적으로 "가"부터 "힐"까지 모두 동작하는 것이 좋다고 생각합니다. 여기에는 몇가지 규칙이 있습니다. 1. 한글 하나에는 여러개의 한자가 대응합니다. 2. "a(b c)"같은 경우 "a"는 중복된 한자이므로, "a"를 제거하고 "b c"만을 사용해야합니다. 3. 몇몇 한자는 인코딩의 문제로 보이지 않을 수 있습니다. 그러나 모두 사용해야합니다. 4. json형식을 따르며, 한자는 배열입니다.
+
+** Start file
+
+#+begin_src
+가
+        
+家 佳 街 可 歌 加 價 假 架 暇
+        
+嘉 嫁 稼 賈 駕 伽 迦 柯 呵 哥 枷 珂 痂 苛 茄 袈 訶 跏 軻 哿 嘏 舸 珈 坷 斝 榎 檟 笳 耞 葭 謌 泇
+        
+–
+각
+        
+各 角 脚 閣 却 覺 刻
+        
+珏 恪 殼 愨 卻 咯 埆 搉 擱 桷
+        
+愨(慤)
+간
+        
+干 間 看 刊 肝 幹 簡 姦 懇
+        
+艮 侃 杆 玕 竿 揀 諫 墾 栞 奸 柬 澗 磵 稈 艱 癇 忓 矸 偘 慳 榦 秆 茛 衎 赶 迀 齦
+        
+杆(桿) 癇(癎)
+갈
+        
+渴
+        
+葛 乫 喝 曷 碣 竭 褐 蝎 鞨 噶 楬 秸 羯 蠍
+        
+–
+감
+        
+甘 減 感 敢 監 鑑
+        
+勘 堪 瞰 坎 嵌 憾 戡 柑 橄 疳 紺 邯 龕 玪 坩 埳 嵁 弇 憨 撼 欿 歛 泔 淦 澉 矙 轗 酣 鹻
+        
+鑑(鑒)
+갑
+        
+甲
+        
+鉀 匣 岬 胛 閘
+        
+–
+개
+        
+改 皆 個 開 介 慨 槪 蓋
+        
+价 凱 愷 漑 塏 愾 疥 芥 豈 鎧 玠 剴 匃 揩 槩 磕 闓
+        
+個(箇) 蓋(盖)
+객
+        
+客
+        
+喀
+        
+–
+갱
+        
+更
+        
+坑 粳 羹 硜 賡 鏗
+        
+–
+갹
+        
+–
+        
+醵
+        
+–
+거
+        
+去 巨 居 車 擧 距 拒 據
+        
+渠 遽 鉅 炬 倨 据 祛 踞 鋸 駏 呿 昛 秬 筥 籧 胠 腒 苣 莒 蕖 蘧 袪 裾
+        
+–
+건
+        
+建 乾 件 健
+        
+巾 虔 楗 鍵 愆 腱 蹇 騫 搴 湕 踺 揵 犍 睷 褰 謇 鞬
+        
+建(䢖) 乾(漧 乹)
+걸
+        
+傑 乞
+        
+桀 乬 朅 榤
+        
+傑(杰)
+검
+        
+儉 劍 檢
+        
+瞼 鈐 黔 撿 芡
+        
+劍(劒)
+겁
+        
+–
+        
+劫 怯 迲 刦 刧
+        
+–
+게
+        
+–
+        
+揭 偈 憩
+        
+–
+격
+        
+格 擊 激 隔
+        
+檄 膈 覡 挌 毄 闃 骼 鬲 鴃
+        
+–
+견
+        
+犬 見 堅 肩 絹 遣 牽
+        
+鵑 甄 繭 譴 狷 畎 筧 縳 繾 羂 蠲 鰹
+        
+–
+결
+        
+決 結 潔 缺
+        
+訣 抉 㛃 焆 迼 玦 鍥 觖 闋
+        
+潔(㓗 洯) 鍥(䤿)
+겸
+        
+兼 謙
+        
+鎌 慊 箝 鉗 嗛 槏 傔 岒 拑 歉 縑 蒹 黚 鼸 嵰
+        
+–
+괘
+        
+掛
+        
+卦 罫 咼 挂 罣 詿
+        
+–
+괴
+        
+塊 愧 怪 壞
+        
+乖 傀 拐 槐 魁 媿 廥 瑰 璝 蒯 襘
+        
+–
+괵
+        
+–
+        
+馘
+        
+–
+굉
+        
+–
+        
+宏 紘 肱 轟 浤 觥 訇 閎
+        
+–
+국
+        
+國 菊 局
+        
+鞠 鞫 麴 𥮗 匊 掬 跼 麯 趜
+        
+國(国)
+군
+        
+君 郡 軍 群
+        
+窘 裙 捃 桾 皸
+        
+–
+굴
+        
+屈
+        
+窟 堀 掘 倔 崛 淈 詘
+        
+–
+궁
+        
+弓 宮 窮
+        
+躬 穹 芎 躳
+        
+–
+권
+        
+券 權 勸 卷 拳
+        
+圈 眷 倦 捲 淃 勌 惓 棬 睠 綣 蜷
+        
+權(権)
+궐
+        
+厥
+        
+闕 獗 蕨 蹶
+        
+–
+궤
+        
+軌
+        
+机 櫃 潰 詭 饋 佹 几 劂 匱 憒 撅 樻 氿 簋 繢 跪 闠 餽 麂
+        
+–
+귀
+        
+貴 歸 鬼
+        
+句 晷 䤥 龜
+        
+龜(龜)
+규
+        
+叫 規 糾
+        
+圭 奎 珪 揆 逵 窺 葵 槻 硅 竅 赳 閨 邽 嫢 湀 茥 煃 刲 嬀 巋 暌 楏 樛 潙 睽 虯 跬 闚 頍 馗 騤
+        
+糾(糺)
+균
+        
+均 菌
+        
+畇 鈞 筠 勻 龜 覠 囷 麏
+        
+勻(匀) 龜(龜)
+귤
+        
+–
+        
+橘
+        
+–
+극
+        
+極 克 劇
+        
+剋 隙 戟 棘 亟 尅 屐 郄
+        
+–
+근
+        
+近 勤 根 斤 僅 謹
+        
+墐 漌 槿 瑾 嫤 筋 劤 懃 芹 菫 覲 饉 巹 廑 觔 跟 釿 靳 堇
+        
+–
+글
+        
+–
+        
+契 㔕
+        
+–
+금
+        
+金 今 禁 錦 禽 琴
+        
+衾 襟 昑 妗 擒 檎 芩 衿 唫 噤 嶔 笒 黅
+        
+–
+급
+        
+及 給 急 級
+        
+汲 伋 扱 圾 岌 皀 礏 笈 芨
+        
+–
+긍
+        
+肯
+        
+亘 兢 矜 殑
+        
+亘(亙)
+긴
+        
+緊
+        
+–
+        
+–
+길
+        
+吉
+        
+佶 桔 姞 拮 蛣
+        
+–
+김
+        
+–
+        
+金
+        
+–
+끽
+        
+–
+        
+喫
+        
+–
+#+end_src
+
+** End file
+
+#+begin_src
+"가":["家", "佳", "街", "可", "歌", "加", "價", "假", "架", "暇", "嘉", "嫁", "稼", "賈", "駕", "伽", "迦", "柯", "呵", "哥", "枷", "珂", "痂", "苛", "茄", "袈", "訶", "跏", "軻", "哿", "嘏", "舸", "珈", "坷", "斝", "榎", "檟", "笳", "耞", "葭", "謌", "泇"],
+"각":["各", "角", "脚", "閣", "却", "覺", "刻", "珏", "恪", "殼", "愨", "卻", "咯", "埆", "搉", "擱", "桷", "慤"],
+"간":["干", "間", "看", "刊", "肝", "幹", "簡", "姦", "懇", "艮", "侃", "杆", "玕", "竿", "揀", "諫", "墾", "栞", "奸", "柬", "澗", "磵", "稈", "艱", "癇", "忓", "矸", "偘", "慳", "榦", "秆", "茛", "衎", "赶", "迀", "齦", "桿", "癎"],
+"갈":["渴", "葛", "乫", "喝", "曷", "碣", "竭", "褐", "蝎", "鞨", "噶", "楬", "秸", "羯", "蠍"],
+"감":["甘", "減", "感", "敢", "監", "鑑", "勘", "堪", "瞰", "坎", "嵌", "憾", "戡", "柑", "橄", "疳", "紺", "邯", "龕", "玪", "坩", "埳", "嵁", "弇", "憨", "撼", "欿", "歛", "泔", "淦", "澉", "矙", "轗", "酣", "鹻", "鑒"],
+"갑":["甲", "鉀", "匣", "岬", "胛", "閘"],
+"개":["改", "皆", "個", "開", "介", "慨", "槪", "蓋", "价", "凱", "愷", "漑", "塏", "愾", "疥", "芥", "豈", "鎧", "玠", "剴", "匃", "揩", "槩", "磕", "闓", "箇", "盖"],
+"객":["客", "喀"],
+"갱":["更", "坑", "粳", "羹", "硜", "賡", "鏗"],
+"갹":["醵"],
+"거":["去", "巨", "居", "車", "擧", "距", "拒", "據", "渠", "遽", "鉅", "炬", "倨", "据", "祛", "踞", "鋸", "駏", "呿", "昛", "秬", "筥", "籧", "胠", "腒", "苣", "莒", "蕖", "蘧", "袪", "裾"],
+"건":["建", "乾", "件", "健", "巾", "虔", "楗", "鍵", "愆", "腱", "蹇", "騫", "搴", "湕", "踺", "揵", "犍", "睷", "褰", "謇", "鞬", "䢖", "漧", "乹"],
+"걸":["傑", "乞", "桀", "乬", "朅", "榤", "杰"],
+"검":["儉", "劍", "檢", "瞼", "鈐", "黔", "撿", "芡", "劒"],
+"겁":["劫", "怯", "迲", "刦", "刧"],
+"게":["揭", "偈", "憩"],
+"격":["格", "擊", "激", "隔", "檄", "膈", "覡", "挌", "毄", "闃", "骼", "鬲", "鴃"],
+"견":["犬", "見", "堅", "肩", "絹", "遣", "牽", "鵑", "甄", "繭", "譴", "狷", "畎", "筧", "縳", "繾", "羂", "蠲", "鰹"],
+"결":["決", "結", "潔", "缺", "訣", "抉", "㛃", "焆", "迼", "玦", "鍥", "觖", "闋", "㓗", "洯", "䤿"],
+"겸":["兼", "謙", "鎌", "慊", "箝", "鉗", "嗛", "槏", "傔", "岒", "拑", "歉", "縑", "蒹", "黚", "鼸", "嵰"],
+"괘":["掛", "卦", "罫", "咼", "挂", "罣", "詿"],
+"괴":["塊", "愧", "怪", "壞", "乖", "傀", "拐", "槐", "魁", "媿", "廥", "瑰", "璝", "蒯", "襘"],
+"괵":["馘"],
+"굉":["宏", "紘", "肱", "轟", "浤", "觥", "訇", "閎"],
+"국":["國", "菊", "局", "鞠", "鞫", "麴", "𥮗", "匊", "掬", "跼", "麯", "趜", "国"],
+"군":["君", "郡", "軍", "群", "窘", "裙", "捃", "桾", "皸"],
+"굴":["屈", "窟", "堀", "掘", "倔", "崛", "淈", "詘"],
+"궁":["弓", "宮", "窮", "躬", "穹", "芎", "躳"],
+"권":["券", "權", "勸", "卷", "拳", "圈", "眷", "倦", "捲", "淃", "勌", "惓", "棬", "睠", "綣", "蜷", "権"],
+"궐":["厥", "闕", "獗", "蕨", "蹶"],
+"궤":["軌", "机", "櫃", "潰", "詭", "饋", "佹", "几", "劂", "匱", "憒", "撅", "樻", "氿", "簋", "繢", "跪", "闠", "餽", "麂"],
+"귀":["貴", "歸", "鬼", "句", "晷", "䤥", "龜", "龜"],
+"규":["叫", "規", "糾", "圭", "奎", "珪", "揆", "逵", "窺", "葵", "槻", "硅", "竅", "赳", "閨", "邽", "嫢", "湀", "茥", "煃", "刲", "嬀", "巋", "暌", "楏", "樛", "潙", "睽", "虯", "跬", "闚", "頍", "馗", "騤", "糺"],
+"균":["均", "菌", "畇", "鈞", "筠", "勻", "龜", "覠", "囷", "麏", "匀", "龜"],
+"귤":["橘"],
+"극":["極", "克", "劇", "剋", "隙", "戟", "棘", "亟", "尅", "屐", "郄"],
+"근":["近", "勤", "根", "斤", "僅", "謹", "墐", "漌", "槿", "瑾", "嫤", "筋", "劤", "懃", "芹", "菫", "覲", "饉", "巹", "廑", "觔", "跟", "釿", "靳", "堇"],
+"글":["契", "㔕"],
+"금":["金", "今", "禁", "錦", "禽", "琴", "衾", "襟", "昑", "妗", "擒", "檎", "芩", "衿", "唫", "噤", "嶔", "笒", "黅"],
+"급":["及", "給", "急", "級", "汲", "伋", "扱", "圾", "岌", "皀", "礏", "笈", "芨"],
+"긍":["肯", "亘", "兢", "矜", "殑", "亙"],
+"긴":["緊"],
+"길":["吉", "佶", "桔", "姞", "拮", "蛣"],
+"김":["金"],
+"끽":["喫"]
+#+end_src
+
+* Making 3 line function a one liner.
+Simple challenge for frequent action while programming.
+
+** Start file
+
+#+begin_src
+Pixel *operator[](Position p) {
+    return &pixels[p.getc()][p.getr()];
+}
+#+end_src
+
+** End file
+
+#+begin_src
+Pixel *operator[](Position p) { return &pixels[p.getc()][p.getr()]; }
+#+end_src
+
+* C to python code snippet
+C code can be easily translated into Python code. However, the difference in syntax can make this process tedious and time-consuming. Can Vim help you here?
+
+** Start file
+
+#+begin_src
+const wc_units_data wc_units_frequency[]=
+{
+    {"mHz", 1e-3},
+    {"Hz", 1.0},
+    {"kHz", 1e3},
+    {"MHz", 1e6},
+    {"GHz", 1e9},
+    {NULL,0}
+};
+#+end_src
+
+** End file
+
+#+begin_src
+def wc_units_frequency():
+    return {"mHz": 1e-3,
+            "Hz": 1.0,
+            "kHz": 1e3,
+            "MHz": 1e6,
+            "GHz": 1e9,
+            "NULL": 0}
+#+end_src
+
+* Tables, Functions, Sprocs
+In order to load some scripts into my database in the correct order I need to load tables first (t_), then functions (fn_), then stored procedures (sp_). The order of the t_ lines and the order of the sp_ lines should also match. Reorder the lines so they will load correctly.
+
+** Start file
+
+#+begin_src
+sp_zebra
+t_orangutan
+t_buffalo
+sp_walrus
+fn_weight
+fn_food
+sp_lion
+t_lion
+sp_buffalo
+t_walrus
+fn_sleep
+t_zebra
+sp_orangutan
+#+end_src
+
+** End file
+
+#+begin_src
+t_buffalo
+t_lion
+t_orangutan
+t_walrus
+t_zebra
+fn_food
+fn_sleep
+fn_weight
+sp_buffalo
+sp_lion
+sp_orangutan
+sp_walrus
+sp_zebra
+#+end_src
+
+* Count to 100 in word form
+Write all the numbers from 1 to 100, using their word forms rather than the digit form. Most of the parts you will need are included in the input file. Use hyphens when appropriate.
+
+** Start file
+
+#+begin_src
+
+one two three four five six seven eight nine ten eleven twelve thirteen
+twenty thirty forty fifty sixty seventy eighty ninety
+hundred
+
+#+end_src
+
+** End file
+
+#+begin_src
+one
+two
+three
+four
+five
+six
+seven
+eight
+nine
+ten
+eleven
+twelve
+thirteen
+fourteen
+fifteen
+sixteen
+seventeen
+eighteen
+nineteen
+twenty
+twenty-one
+twenty-two
+twenty-three
+twenty-four
+twenty-five
+twenty-six
+twenty-seven
+twenty-eight
+twenty-nine
+thirty
+thirty-one
+thirty-two
+thirty-three
+thirty-four
+thirty-five
+thirty-six
+thirty-seven
+thirty-eight
+thirty-nine
+forty
+forty-one
+forty-two
+forty-three
+forty-four
+forty-five
+forty-six
+forty-seven
+forty-eight
+forty-nine
+fifty
+fifty-one
+fifty-two
+fifty-three
+fifty-four
+fifty-five
+fifty-six
+fifty-seven
+fifty-eight
+fifty-nine
+sixty
+sixty-one
+sixty-two
+sixty-three
+sixty-four
+sixty-five
+sixty-six
+sixty-seven
+sixty-eight
+sixty-nine
+seventy
+seventy-one
+seventy-two
+seventy-three
+seventy-four
+seventy-five
+seventy-six
+seventy-seven
+seventy-eight
+seventy-nine
+eighty
+eighty-one
+eighty-two
+eighty-three
+eighty-four
+eighty-five
+eighty-six
+eighty-seven
+eighty-eight
+eighty-nine
+ninety
+ninety-one
+ninety-two
+ninety-three
+ninety-four
+ninety-five
+ninety-six
+ninety-seven
+ninety-eight
+ninety-nine
+one hundred
+#+end_src
+
+* Mr. Hacker
+Elvin is hacker. He has piece of users database from some social net site. Recently he installed Vim, and he wants to convert CSV DB to specific format `key=value' where `key' is login and `value' is password, but password in DB is encrypted in ROT13. Help him.
+
+** Start file
+
+#+begin_src
+name,surname,login,password
+john,smith,superjser,wfvfpbbyyby
+fred,simpson,fredsi,qmcapivrs
+will,popov,vimer123,rznpffhpxf
+greg,rockin,gogin,yvahkvfzlsni
+anastasia,krasivaya,heartinussr,patrioticwoman
+lev,tolstoy,ltolstoy,jnenaqcrnprvfirelireluneqobbxgbernqnaqirelirelybatnununyvxrguvfcnffubjvjvyyerzrzorevguhu
+#+end_src
+
+** End file
+
+#+begin_src
+superjser=jsiscoollol
+fredsi=dzpncvief
+vimer123=emacssucks
+gogin=linuxismyfav
+heartinussr=cngevbgvpjbzna
+ltolstoy=warandpeaceisveryveryhardbooktoreadandveryverylongahahalikethispasshowiwillrememberithuh
+#+end_src
+
+* Comparing Schema With Diff
+
+Sometimes databases output things differently one to another. Fixing things that are out of order will make the diffs more usable.
+
+** Start file
+
+#+begin_src
+CREATE TABLE sales.stores (                                     CREATE TABLE sales.stores (
+ store_id INT IDENTITY (1, 1) PRIMARY KEY,                       store_id INT IDENTITY (1, 1) PRIMARY KEY,
+ store_name VARCHAR (255) NOT NULL,                              store_name VARCHAR (255) NOT NULL,
+ phone VARCHAR (25),                                             phone VARCHAR (25),
+ email VARCHAR (255),                                            email VARCHAR (255),
+ street VARCHAR (255),                                           street VARCHAR (255),
+ city VARCHAR (255),                                             city VARCHAR (255),
+ state VARCHAR (10),                                             state VARCHAR (10),
+ zip_code VARCHAR (5)                                            zip_code VARCHAR (5)
+);                                                              );
+
+
+                                                              > CREATE TABLE sales.customers (
+                                                              >  customer_id INT IDENTITY (1, 1) PRIMARY KEY,
+                                                              >  first_name VARCHAR (255) NOT NULL,
+                                                              >  last_name VARCHAR (255) NOT NULL,
+                                                              >  phone VARCHAR (25),
+                                                              >  street VARCHAR (255),
+                                                              >  city VARCHAR (50),
+                                                              >  state VARCHAR (25),
+                                                              >  zip_code VARCHAR (5)
+                                                              > );
+                                                              >
+CREATE TABLE production.categories (                            CREATE TABLE production.categories (
+ category_id INT IDENTITY (1, 1) PRIMARY KEY,                    category_id INT IDENTITY (1, 1) PRIMARY KEY,
+ category_name VARCHAR (255) NOT NULL                            category_name VARCHAR (255) NOT NULL
+);                                                              );
+
+
+CREATE TABLE production.products (                              CREATE TABLE production.products (
+ product_id INT IDENTITY (1, 1) PRIMARY KEY,                     product_id INT IDENTITY (1, 1) PRIMARY KEY,
+ product_name VARCHAR (255) NOT NULL,                            product_name VARCHAR (255) NOT NULL,
+ brand_id INT NOT NULL,                                          brand_id INT NOT NULL,
+ category_id INT NOT NULL,                                       category_id INT NOT NULL,
+ model_year SMALLINT NOT NULL,                                   model_year SMALLINT NOT NULL,
+ list_price DECIMAL (10, 2) NOT NULL,                            list_price DECIMAL (10, 2) NOT NULL,
+ FOREIGN KEY (category_id)                                       FOREIGN KEY (category_id) 
+        REFERENCES production.categories (category_id)                  REFERENCES production.categories (category_id) 
+        ON DELETE CASCADE ON UPDATE CASCADE,                            ON DELETE CASCADE ON UPDATE CASCADE,
+ FOREIGN KEY (brand_id)                                          FOREIGN KEY (brand_id) 
+        REFERENCES sales.brands (brand_id)                              REFERENCES sales.brands (brand_id) 
+        ON DELETE CASCADE ON UPDATE CASCADE                             ON DELETE CASCADE ON UPDATE CASCADE
+);                                                              );
+
+
+CREATE TABLE sales.customers (                                <
+ customer_id INT IDENTITY (1, 1) PRIMARY KEY,                 <
+ first_name VARCHAR (255) NOT NULL,                           <
+ last_name VARCHAR (255) NOT NULL,                            <
+ phone VARCHAR (25),                                          <
+ email VARCHAR (255) NOT NULL,                                <
+ street VARCHAR (255),                                        <
+ city VARCHAR (50),                                           <
+ state VARCHAR (25),                                          <
+ zip_code VARCHAR (5)                                         <
+);                                                            <
+#+end_src
+
+** End file
+
+#+begin_src
+CREATE TABLE sales.stores (                                     CREATE TABLE sales.stores (
+ store_id INT IDENTITY (1, 1) PRIMARY KEY,                       store_id INT IDENTITY (1, 1) PRIMARY KEY,
+ store_name VARCHAR (255) NOT NULL,                              store_name VARCHAR (255) NOT NULL,
+ phone VARCHAR (25),                                             phone VARCHAR (25),
+ email VARCHAR (255),                                            email VARCHAR (255),
+ street VARCHAR (255),                                           street VARCHAR (255),
+ city VARCHAR (255),                                             city VARCHAR (255),
+ state VARCHAR (10),                                             state VARCHAR (10),
+ zip_code VARCHAR (5)                                            zip_code VARCHAR (5)
+);                                                              );
+
+                                                              <
+CREATE TABLE production.categories (                            CREATE TABLE production.categories (
+ category_id INT IDENTITY (1, 1) PRIMARY KEY,                    category_id INT IDENTITY (1, 1) PRIMARY KEY,
+ category_name VARCHAR (255) NOT NULL                            category_name VARCHAR (255) NOT NULL
+);                                                              );
+
+
+CREATE TABLE production.products (                              CREATE TABLE production.products (
+ product_id INT IDENTITY (1, 1) PRIMARY KEY,                     product_id INT IDENTITY (1, 1) PRIMARY KEY,
+ product_name VARCHAR (255) NOT NULL,                            product_name VARCHAR (255) NOT NULL,
+ brand_id INT NOT NULL,                                          brand_id INT NOT NULL,
+ category_id INT NOT NULL,                                       category_id INT NOT NULL,
+ model_year SMALLINT NOT NULL,                                   model_year SMALLINT NOT NULL,
+ list_price DECIMAL (10, 2) NOT NULL,                            list_price DECIMAL (10, 2) NOT NULL,
+ FOREIGN KEY (category_id)                                       FOREIGN KEY (category_id) 
+        REFERENCES production.categories (category_id)                  REFERENCES production.categories (category_id) 
+        ON DELETE CASCADE ON UPDATE CASCADE,                            ON DELETE CASCADE ON UPDATE CASCADE,
+ FOREIGN KEY (brand_id)                                          FOREIGN KEY (brand_id) 
+        REFERENCES sales.brands (brand_id)                              REFERENCES sales.brands (brand_id) 
+        ON DELETE CASCADE ON UPDATE CASCADE                             ON DELETE CASCADE ON UPDATE CASCADE
+);                                                              );
+
+
+CREATE TABLE sales.customers (                                  CREATE TABLE sales.customers (
+ customer_id INT IDENTITY (1, 1) PRIMARY KEY,                    customer_id INT IDENTITY (1, 1) PRIMARY KEY,
+ first_name VARCHAR (255) NOT NULL,                              first_name VARCHAR (255) NOT NULL,
+ last_name VARCHAR (255) NOT NULL,                               last_name VARCHAR (255) NOT NULL,
+ phone VARCHAR (25),                                             phone VARCHAR (25),
+ email VARCHAR (255) NOT NULL,                                <
+ street VARCHAR (255),                                           street VARCHAR (255),
+ city VARCHAR (50),                                              city VARCHAR (50),
+ state VARCHAR (25),                                             state VARCHAR (25),
+ zip_code VARCHAR (5)                                            zip_code VARCHAR (5)
+);                                                              );
+#+end_src
+
+* Simple Maths 2
+Time to practice expression register! #maths #linear
+
+** Start file
+
+#+begin_src
+34 5 13
+26 7 8
+21 6 6
+16 14
+13 11
+11 10
+9 8
+8 7
+#+end_src
+
+
+** End file
+
+#+begin_src
+34 5 13
+26 7 8
+21 6 6
+47 16 14
+38 13 11
+34 11 10
+28 9 8
+25 8 7
+#+end_src
+
+* RUST HTML to maud.
+RUST HTML to maud. maud is one of the template engines for server-side rendering based on rust. rusty practice on vimgolf
+
+** Start file
+
+#+begin_src
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <title>This is title</title>
+        </head>
+        <body>
+                <h1 class="hello">Hello maud!</h1>
+                <p id="best" class="truth">Maud is best pony</p>
+                <div id="beautiful" class="truth">Maud is the most beautiful pony</div>
+                <br>
+                <span id="adorable" class="truth">Maud is adorable</span>
+                <br>
+                <p class="anything">Maud is<input id="something" type="text" value="anything"/></p>
+        </body>
+</html>
+#+end_src
+
+** End file
+
+#+begin_src
+html! {
+        (DOCTYPE)
+        html {
+                head {
+                        meta charset="UTF-8"
+                        title "This is title"
+                }
+                body {
+                        h1.hello "Hello maud!"
+                        p#best.truth "Maud is best pony"
+                        div#beautiful.truth "Maud is the most beautiful pony"
+                        br;
+                        span#adorable.truth "Maud is adorable"
+                        br;
+                        p.anything {
+                                "Maud is"
+                                input#something type="text" value="anything"
+                        }
+                }
+        }
+}
 #+end_src
 

@@ -503,6 +503,8 @@ the challanges are good for any one working with any editor.
 - [[#modernise-code][Modernise code]]
 - [[#ssh-config-skills][ssh config skills]]
 - [[#enumerate-bullets][Enumerate Bullets]]
+- [[#hs-final-exam-vimgolf][HS Final exam vimgolf]]
+- [[#python-dataclasses][Python dataclasses]]
 
 * Box it
 Create a box around a line.
@@ -24512,5 +24514,66 @@ We will need to refer to the bullet points in our document explicitly later, so 
 ### Search-related:
 12. needle
 13. haystack
+#+end_src
+
+* HS Final exam vimgolf
+
+Change the initial file to a single line containing all names comma-separated with numbers inside parentheses.
+
+** Start file
+
+#+begin_src
+   Hossein 40.32472348
+    Miguel 50.31417393123
+    Pierre 40.1283712
+     Anier 45.213917900
+ Giancarlo 57.2137189394
+     Karim 34.87621341324
+  Victoria 23.1236248821
+   Nicolas 37.2163718741
+   Parshad 40.1273461284
+   Shanaya 60.213764127
+    Victor 30.2164781849
+    Manuel 50.1246215457
+#+end_src
+
+** End file
+
+#+begin_src
+Hossein (40), Miguel (50), Pierre (40), Anier (45), Giancarlo (57), Karim (34), Victoria (23), Nicolas (37), Parshad (40), Shanaya (60), Victor (30), Manuel (50)
+#+end_src
+
+* Python dataclasses
+
+Simple challenge to extract fields from a Python class
+
+** Start file
+
+#+begin_src 
+from dataclasses import dataclass
+
+@dataclass
+class Student:
+    student_id: str
+    name: str
+    age: int 
+    score: float
+
+fields = ""
+#+end_src
+
+** End file
+
+#+begin_src 
+from dataclasses import dataclass
+
+@dataclass
+class Student:
+    student_id: str
+    name: str
+    age: int 
+    score: float
+
+fields = "student_id,name,age,score"
 #+end_src
 

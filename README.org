@@ -57,6 +57,7 @@ the challanges are good for any one working with any editor.
 - [[#extract-argument-from-function][Extract argument from function]]
 - [[#preferably-without-multi-cursor-plugin][Preferably without multi-cursor plugin]]
 - [[#letterbox][Letterbox]]
+- [[#comment-and-uncomment-code-inline][comment and uncomment code inline]]
 - [[#adams-challenge][Adam's challenge]]
 - [[#flip-the-bit][Flip the bit]]
 - [[#missing-library-and-a-typo][Missing Library and a Typo]]
@@ -499,6 +500,9 @@ the challanges are good for any one working with any editor.
 - [[#sfd-roc-pipe-dreams][SFD-ROC: Pipe Dreams]]
 - [[#fibc-cleanup][fib.c cleanup]]
 - [[#back-to-the-future][Back to the Future]]
+- [[#modernise-code][Modernise code]]
+- [[#ssh-config-skills][ssh config skills]]
+- [[#enumerate-bullets][Enumerate Bullets]]
 
 * Box it
 Create a box around a line.
@@ -24387,4 +24391,126 @@ numbers.push_back(3141);
 auto numbers = { 1337, 424242, 12345678, 3141 };
 #+end_src 
 
+* ssh config skills
+
+Parse output from `kuebctl get no -o wide` into an .ssh/config file!
+
+** Start file
+
+#+begin_src
+master-0-pccc-269-4                Ready                      master   5d3h   v1.18.2   10.0.10.10    <none>
+worker-pool1-07p524t4-pccc-269-4   Ready                      worker   5d2h   v1.18.2   10.0.10.17    <none>
+worker-pool1-2l7ogj75-pccc-269-4   Ready                      worker   5d2h   v1.18.2   10.0.10.18    <none>
+worker-pool1-3qrc0j0w-pccc-269-4   Ready                      worker   5d2h   v1.18.2   10.0.10.4     <none>
+worker-pool1-4qo9q5zu-pccc-269-4   Ready,SchedulingDisabled   worker   5d2h   v1.18.2   10.0.10.6     <none>
+worker-pool1-c624wl6q-pccc-269-4   Ready,SchedulingDisabled   worker   5d2h   v1.18.2   10.0.10.13    <none>
+worker-pool1-c8b1h8vv-pccc-269-4   Ready                      worker   5d2h   v1.18.2   10.0.10.36    <none>
+worker-pool1-hdas516w-pccc-269-4   Ready                      worker   5d2h   v1.18.2   10.0.10.2     <none>
+worker-pool1-i3gil9z5-pccc-269-4   Ready,SchedulingDisabled   worker   5d2h   v1.18.2   10.0.10.22    <none>
+worker-pool1-iwnlys88-pccc-269-4   Ready                      worker   5d2h   v1.18.2   10.0.10.12    <none>
+worker-pool1-nhw7dtfw-pccc-269-4   Ready,SchedulingDisabled   worker   5d2h   v1.18.2   10.0.10.24    <none>
+worker-pool1-s2y990ll-pccc-269-4   Ready,SchedulingDisabled   worker   5d2h   v1.18.2   10.0.10.21    <none>
+worker-pool1-skqyxr40-pccc-269-4   Ready,SchedulingDisabled   worker   5d2h   v1.18.2   10.0.10.27    <none>
+#+end_src
+
+** End file
+
+#+begin_src
+host master
+  hostname 10.0.10.10
+
+host 07
+  hostname 10.0.10.17
+
+host 2l
+  hostname 10.0.10.18
+
+host 3q
+  hostname 10.0.10.4
+
+host 4q
+  hostname 10.0.10.6
+
+host c6
+  hostname 10.0.10.13
+
+host c8
+  hostname 10.0.10.36
+
+host hd
+  hostname 10.0.10.2
+
+host i3
+  hostname 10.0.10.22
+
+host iw
+  hostname 10.0.10.12
+
+host nh
+  hostname 10.0.10.24
+
+host s2
+  hostname 10.0.10.21
+
+host sk
+  hostname 10.0.10.27
+#+end_src
+
+* Enumerate Bullets
+
+We will need to refer to the bullet points in our document explicitly later, so we need to assign them some ID's!
+
+** Start file
+
+#+begin_src
+# This is an enumeration of bullet points!
+## Usual placeholders:
+- foo
+- bar
+- baz
+
+- (qux)
+- (quux)
+## pythonic-placeholders:
+- spam
+- eggs
+
+## cryptographic placeholders:
+
+- alice
+- bob
+- eve
+- trudy
+
+### Search-related:
+- needle
+- haystack
+#+end_src
+
+** End file
+
+#+begin_src
+# This is an enumeration of bullet points!
+## Usual placeholders:
+01. foo
+02. bar
+03. baz
+
+04. (qux)
+05. (quux)
+## pythonic-placeholders:
+06. spam
+07. eggs
+
+## cryptographic placeholders:
+
+08. alice
+09. bob
+10. eve
+11. trudy
+
+### Search-related:
+12. needle
+13. haystack
+#+end_src
 

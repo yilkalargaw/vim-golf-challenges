@@ -24367,3 +24367,24 @@ main ()
 }
 #+END_SRC
 
+* Modernise code
+
+Modernise and clean up some C++ code.
+
+** Start file
+
+#+begin_src
+std::vector<int> numbers;
+numbers.push_back(1337);
+numbers.push_back(424242);
+numbers.push_back(12345678);
+numbers.push_back(3141);
+#+end_src
+
+** End file
+
+#+begin_src 
+auto numbers = { 1337, 424242, 12345678, 3141 };
+#+end_src 
+
+

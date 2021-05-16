@@ -6,8 +6,9 @@ This all the vim golf challenges that are scraped from [[vimgolf.com][vimgolf.co
 I scraped and put them in a single org file because I am used to the format. I think
 the challanges are good for any one working with any editor.
 
-Note that this file is not displayed fully in the github front page due to line number
-limitations. You can download it to see the missing portions.
+Note that this file is not displayed fully in the github [[https://github.com/yilkalargaw/vim-golf-challenges][front page]] due to line number
+limitations. You can view the file by [[https://github.com/yilkalargaw/vim-golf-challenges/blob/master/README.org][clikcing on it]] from the files list or you can 
+download it to see the missing portions.
 
 * table of contents                                                     :TOC_1:
 - [[#box-it][Box it]]

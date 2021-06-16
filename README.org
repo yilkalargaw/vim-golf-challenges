@@ -526,6 +526,17 @@ download it to see the missing portions.
 - [[#comparing-schema-with-diff][Comparing Schema With Diff]]
 - [[#simple-maths-2][Simple Maths 2]]
 - [[#rust-html-to-maud][RUST HTML to maud.]]
+- [[#transpose-a-python-matrix][Transpose a python matrix]]
+- [[#create-a-diamond-comment][Create a diamond comment]]
+- [[#lowercase-first-characters][Lowercase first characters]]
+- [[#make-list-of-numbers-from-1-to-30-more-compact-but-more-confusing][Make list of numbers from 1 to 30 more compact, but more confusing]]
+- [[#write-hello-world-in-the-i-use-arch-btw--programming-language][Write Hello World in the 'i use arch btw' -programming language]]
+- [[#migrated-to-postgres][Migrated to Postgres!]]
+- [[#increment-number-for-every-10-lines][Increment number for every 10 lines]]
+- [[#simple-replacements][simple replacements]]
+- [[#inverting-lines][Inverting Lines]]
+- [[#csv-to-md-format][CSV to MD format]]
+- [[#vimtutor-but-you-can-cheat][vimtutor, but you can cheat]]
 
 * Box it
 Create a box around a line.
@@ -25722,3 +25733,583 @@ html! {
 }
 #+end_src
 
+* Transpose a python matrix
+
+Rotate the matrix in 90 degrees.
+
+** Start file
+
+#+begin_src 
+((1, 2, 3, 4),
+ (5, 6, 7, 8),
+ (9, 10, 11, 12),
+ (13, 14, 15, 16))
+#+end_src
+
+** End file
+
+#+begin_src 
+((1, 5, 9, 13),
+ (2, 6, 10, 14),
+ (3, 7, 11, 15),
+ (4, 8, 12, 16))
+ #+end_src
+
+* Create a diamond comment
+
+Encapsulate the text in a diamond pattern.
+
+** Start file
+
+#+begin_src 
+This is some text
+#+end_src
+
+
+** End file
+
+#+begin_src 
+         #
+        # #
+       #   #
+      #     #
+     #       #
+    #         #
+   #           #
+  #             #
+ #               #
+#This is some text#
+ #               #
+  #             #
+   #           #
+    #         #
+     #       #
+      #     #
+       #   #
+        # #
+         #
+#+end_src
+
+* Lowercase first characters
+
+This is the (abridged) input for Day 3 in Advent of Code 2019. The output is a format more suitable for Prolog programming: the two lines of input become two lists of pairs, joined together in a wires functor.
+
+** Start file
+
+#+begin_src 
+R1009,U263,L517,U449,L805,D78,L798,D883,L777,D562,R652,D348,R999,D767,L959,U493,R59
+L1003,D960,L10,D57,R294,U538,R867,D426,L524,D441,R775,U308,R577,D785,R495,U847,R643
+#+end_src
+
+** End file
+
+#+begin_src 
+wires([r-1009,u-263,l-517,u-449,l-805,d-78,l-798,d-883,l-777,d-562,r-652,d-348,r-999,d-767,l-959,u-493,r-59],[l-1003,d-960,l-10,d-57,r-294,u-538,r-867,d-426,l-524,d-441,r-775,u-308,r-577,d-785,r-495,u-847,r-643]).
+#+end_src
+
+* Make list of numbers from 1 to 30 more compact, but more confusing
+
+Change the naming logic of numbers to end up with less lines.
+
+** Start file
+
+#+begin_src 
+one = 1
+two = 2
+three = 3
+four = 4
+five = 5
+six = 6
+seven = 7
+eight = 8
+nine = 9
+ten = 10
+eleven = 11
+twelve = 12
+thirteen = 13
+fourteen = 14
+fifteen = 15
+sixteen = 16
+seventeen = 17
+eighteen = 18
+nineteen = 19
+twenty = 20
+twenty_one = 21
+twenty_two = 22
+twenty_three = 23
+twenty_four = 24
+twenty_five = 25
+twenty_six = 26
+twenty_seven = 27
+twenty_eight = 28
+twenty_nine = 29
+thirty = 30
+#+end_src
+
+** End file
+
+#+begin_src 
+one = 1
+two = 2
+three = 3
+four = 4
+five = 5
+six = 6
+seven = 7
+eight = 8
+nine = 9
+ten = 10
+eleven = [11, 12, 13]
+tweleven = [14, 15, 16]
+threleven = [17, 18, 19]
+twenty = 20
+twelve = [21, 22, 23]
+twolve = [24, 25, 26]
+threlve = [27, 28, 29]
+thirty = 30
+#+end_src
+
+* Write Hello World in the 'i use arch btw' -programming language
+
+> "I use Arch btw" is an esoteric programming language based on Brainfuck in which the Brainfuck commands have been replaced with the following keywords: i, use, arch, linux, btw, by, the, way. https://github.com/OverMighty/i-use-arch-btw
+
+** Start file
+
+#+begin_src 
+; Example program that prints "Hello, World!"
+#+end_src
+
+** End file
+
+#+begin_src 
+; Example program that prints "Hello, World!"
+
+linux the linux linux linux linux linux linux linux i arch use way i linux btw
+linux the linux i arch arch arch arch arch use way i arch arch btw arch arch
+arch arch arch arch arch btw btw arch arch arch btw the linux i arch arch arch
+arch arch use way i arch btw linux linux linux linux linux linux linux linux
+linux linux linux linux btw linux linux linux the linux i arch arch arch use way
+i btw linux the linux linux linux i arch use way i linux linux linux btw arch
+arch arch btw linux linux linux linux linux linux btw linux linux linux linux
+linux linux linux linux btw linux the linux linux linux i arch use way i btw
+the linux linux linux i arch use way i linux btw
+#+end_src
+
+* Migrated to Postgres!
+
+Celebration completion of this project. https://github.com/igrigorik/vimgolf/pull/322
+
+** Start file
+
+#+begin_src 
+Vimgolf runs on MongoDB.
+#+end_src
+
+
+** End file
+
+#+begin_src 
+Vimgolf now runs on Postgres! 🎉
+#+end_src
+
+* Increment number for every 10 lines
+
+The file consists of 2 columns (code and percentage). We need to add 2 more columns with increasing number for 4th column (Xcols) and increment 3rd column (Ycols) only for every 10 lines with reset of 4th column
+
+** Start file
+
+#+begin_src 
+code,percentage,Ycols,Xcols
+52,67.88
+233,66.61
+119,66.26
+37,63.88
+21,63.31
+85,62.78
+22,60.9
+109,60.84
+96,57.75
+51,57.64
+210,57.54
+205,57.53
+113,57.3
+97,57.09
+66,56.37
+10,56.21
+49,56.05
+248,55.87
+68,55.76
+87,55.51
+29,54.99
+93,54.84
+11,54.77
+186,54.64
+27,54.52
+220,54.5
+89,54.32
+151,53.36
+47,53.34
+212,53.28
+#+end_src
+
+
+** End file
+
+#+begin_src 
+code,percentage,Ycols,Xcols
+52,67.88,1,1
+233,66.61,1,2
+119,66.26,1,3
+37,63.88,1,4
+21,63.31,1,5
+85,62.78,1,6
+22,60.9,1,7
+109,60.84,1,8
+96,57.75,1,9
+51,57.64,1,10
+210,57.54,2,1
+205,57.53,2,2
+113,57.3,2,3
+97,57.09,2,4
+66,56.37,2,5
+10,56.21,2,6
+49,56.05,2,7
+248,55.87,2,8
+68,55.76,2,9
+87,55.51,2,10
+29,54.99,3,1
+93,54.84,3,2
+11,54.77,3,3
+186,54.64,3,4
+27,54.52,3,5
+220,54.5,3,6
+89,54.32,3,7
+151,53.36,3,8
+47,53.34,3,9
+212,53.28,3,10
+#+end_src
+
+* simple replacements
+
+The goal is to see the replacement commands in action.
+
+** Start file
+
+#+begin_src 
+The sublime users worked on projects more closed to my own project so I started to
+check how they did things and then I started learning about emacs. It was not
+cool, it was too hard to learn how to use it, to load new config files I had to
+restart emacs every time and so much other problems, but since they did,
+I convinced myself that I could learn it too so I did.
+
+I used emacs for a few months and what I like about emacs the most is that it's
+optimized for editing files not creating new ones. For the most of the time,
+we're editing files and moving between lines of code so that makes sense.
+Finally I was happy and productive using emacs.
+#+end_src
+
+
+** End file
+
+#+begin_src 
+The vim users worked on projects more closed to my own project so I started to
+check how they did things and then I started learning about vim. It was not
+cool, it was too hard to learn how to use it, to load new config files I had to
+restart vim every time and so much other problems, but since they did,
+I convinced myself that I could learn it too so I did.
+
+I used vim for a few months and what I like about vim the most is that it's
+optimized for editing files not creating new ones. For the most of the time,
+we're editing files and moving between lines of code so that makes sense.
+Finally I was happy and productive using vim.
+#+end_src
+
+* Inverting Lines
+
+A simple challenge to invert all lines, except the first.
+
+** Start file
+
+#+begin_src 
+Here’s the thing about Vim.
+Ex mode too, and it’s magic! 
+Ex commands, there be dragons!
+Until you realize it can help you be more efficient.
+Learning about regexes sounds boring,
+#+end_src
+
+** End file
+
+#+begin_src
+Here’s the thing about Vim.
+Learning about regexes sounds boring,
+Until you realize it can help you be more efficient.
+Ex commands, there be dragons!
+Ex mode too, and it’s magic! 
+#+end_src
+
+* CSV to MD format
+
+To convert a CSV list to Markdown list
+
+** Start file
+
+#+begin_src 
+apple,fruit
+onion,vegetable
+cherry,fruit
+garlic,vegetable
+ginger,vegetable
+rose,flower
+orange,fruit
+jasmine,flower
+#+end_src
+
+** End file
+
+#+begin_src 
+- flower
+        - jasmine
+        - rose
+- fruit
+        - orange
+        - cherry
+        - apple
+- vegetable
+        - ginger
+        - garlic
+        - onion
+#+end_src
+
+* vimtutor, but you can cheat
+
+It's time to revisit vimtutor, but as an experienced Vim user! Your goal is to change the file to appear as if you had gone through the tutorial, but you do NOT need to actually complete the tutorial as written or do anything that doesn't result in changes to the file. You may use whatever you have in your Vim toolbelt that's allowed under VimGolf rules. The whole tutorial is too large to submit, so only the relevant lesson headers and associated practice lines are presented in this challenge. You will have to reference the tutor for the original instructions if you need them: https://raw.githubusercontent.com/vim/vim/4466ad6baa22485abb1147aca3340cced4778a66/runtime/tutor/tutor
+
+** Start file
+
+#+begin_src 
+===============================================================================
+=    W e l c o m e   t o   t h e   V I M   T u t o r    -    Version 1.7      =
+===============================================================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                     Lesson 1.3: TEXT EDITING - DELETION
+
+---> The ccow jumpedd ovverr thhe mooon.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      Lesson 1.4: TEXT EDITING - INSERTION
+
+---> There is text misng this .
+---> There is some text missing from this line.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                     Lesson 1.5: TEXT EDITING - APPENDING
+
+---> There is some text missing from th
+     There is some text missing from this line.
+---> There is also some text miss
+     There is also some text missing here.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        Lesson 2.1: DELETION COMMANDS
+
+---> There are a some words fun that don't belong paper in this sentence.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      Lesson 2.2: MORE DELETION COMMANDS
+
+---> Somebody typed the end of this line twice. end of this line twice.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                     Lesson 2.5: USING A COUNT TO DELETE MORE
+
+--->  this ABC DE line FGHI JK LMN OP of words is Q RS TUV cleaned up.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         Lesson 2.6: OPERATING ON LINES
+
+--->  1)  Roses are red,
+--->  2)  Mud is fun,
+--->  3)  Violets are blue,
+--->  4)  I have a car,
+--->  5)  Clocks tell time,
+--->  6)  Sugar is sweet
+--->  7)  And so are you.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         Lesson 2.7: THE UNDO COMMAND
+
+---> Fiix the errors oon thhis line and reeplace them witth undo.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         Lesson 3.1: THE PUT COMMAND
+
+---> d) Can you learn too?
+---> b) Violets are blue,
+---> c) Intelligence is learned,
+---> a) Roses are red,
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       Lesson 3.2: THE REPLACE COMMAND
+
+--->  Whan this lime was tuoed in, someone presswd some wrojg keys!
+--->  When this line was typed in, someone pressed some wrong keys!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        Lesson 3.3: THE CHANGE OPERATOR
+
+---> This lubw has a few wptfd that mrrf changing usf the change operator.
+---> This line has a few words that need changing using the change operator.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       Lesson 3.4: MORE CHANGES USING c
+
+---> The end of this line needs some help to make it like the second.
+---> The end of this line needs to be corrected using the  c$  command.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      Lesson 4.4: THE SUBSTITUTE COMMAND
+
+---> thee best time to see thee flowers is in thee spring.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         Lesson 6.1: THE OPEN COMMAND
+
+---> After typing  o  the cursor is placed on the open line in Insert mode.
+
+---> Open up a line above this by typing O while the cursor is on this line.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        Lesson 6.2: THE APPEND COMMAND
+
+---> This li will allow you to pract appendi text to a line.
+---> This line will allow you to practice appending text to a line.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    Lesson 6.3: ANOTHER WAY TO REPLACE
+
+---> Adding 123 to xxx gives you xxx.
+---> Adding 123 to 456 gives you 579.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        Lesson 6.4: COPY AND PASTE TEXT
+
+--->  a) this is the first item.
+      b)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#+end_src
+
+** End file
+
+#+begin_src 
+===============================================================================
+=    W e l c o m e   t o   t h e   V I M   T u t o r    -    Version 1.7      =
+===============================================================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                     Lesson 1.3: TEXT EDITING - DELETION
+
+---> The cow jumped over the moon.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      Lesson 1.4: TEXT EDITING - INSERTION
+
+---> There is some text missing from this line.
+---> There is some text missing from this line.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                     Lesson 1.5: TEXT EDITING - APPENDING
+
+---> There is some text missing from this line.
+     There is some text missing from this line.
+---> There is also some text missing here.
+     There is also some text missing here.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        Lesson 2.1: DELETION COMMANDS
+
+---> There are some words that don't belong in this sentence.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      Lesson 2.2: MORE DELETION COMMANDS
+
+---> Somebody typed the end of this line twice.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                     Lesson 2.5: USING A COUNT TO DELETE MORE
+
+--->  this line of words is cleaned up.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         Lesson 2.6: OPERATING ON LINES
+
+--->  1)  Roses are red,
+--->  3)  Violets are blue,
+--->  6)  Sugar is sweet
+--->  7)  And so are you.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         Lesson 2.7: THE UNDO COMMAND
+
+---> Fix the errors on this line and replace them with undo.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         Lesson 3.1: THE PUT COMMAND
+
+---> a) Roses are red,
+---> b) Violets are blue,
+---> c) Intelligence is learned,
+---> d) Can you learn too?
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       Lesson 3.2: THE REPLACE COMMAND
+
+--->  When this line was typed in, someone pressed some wrong keys!
+--->  When this line was typed in, someone pressed some wrong keys!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        Lesson 3.3: THE CHANGE OPERATOR
+
+---> This line has a few words that need changing using the change operator.
+---> This line has a few words that need changing using the change operator.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       Lesson 3.4: MORE CHANGES USING c
+
+---> The end of this line needs to be corrected using the  c$  command.
+---> The end of this line needs to be corrected using the  c$  command.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      Lesson 4.4: THE SUBSTITUTE COMMAND
+
+---> the best time to see the flowers is in the spring.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         Lesson 6.1: THE OPEN COMMAND
+
+some text
+---> After typing  o  the cursor is placed on the open line in Insert mode.
+
+---> Open up a line above this by typing O while the cursor is on this line.
+some text
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        Lesson 6.2: THE APPEND COMMAND
+
+---> This line will allow you to practice appending text to a line.
+---> This line will allow you to practice appending text to a line.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    Lesson 6.3: ANOTHER WAY TO REPLACE
+
+---> Adding 123 to 456 gives you 579.
+---> Adding 123 to 456 gives you 579.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        Lesson 6.4: COPY AND PASTE TEXT
+
+--->  a) this is the first item.
+      b) this is the a second item.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#+end_src

@@ -1,16 +1,7 @@
 #+TITLE: Vimgolf Challenges
+#+HTML_HEAD: <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 
-Almost all (i.e. at the time of writing) the vimgolf challenges in one org file.
-
-This repo contains challenges that have been  scraped from [[vimgolf.com][vimgolf.com]].
-I scraped and put them in a single org file because I am used to the format. I think
-the challanges are good for any one working with any editor.
-
-Note that this file is not displayed fully in the github [[https://github.com/yilkalargaw/vim-golf-challenges][front page]] due to line number
-limitations. You can view the file by [[https://github.com/yilkalargaw/vim-golf-challenges/blob/master/README.org][clikcing on it]] from the files list or you can 
-download it to see the missing portions.
-
-* table of contents                                                     :TOC_1:
+* table of contents                                                   :TOC_1:
 - [[#box-it][Box it]]
 - [[#simple-practical-and-common][Simple, Practical, and Common]]
 - [[#ninja-substitution][ninja substitution]]
@@ -251,9 +242,7 @@ download it to see the missing portions.
 - [[#create-arrows-in-a-list][create arrows in a list]]
 - [[#compile-c][Compile C]]
 - [[#alphabetize-the-directory][Alphabetize the directory]]
-- [[#allen-taylor][Allen, Taylor]]
 - [[#deleting-folded-text][Deleting folded text]]
-- [[#vim-set-foldmethodmarker-][vim: set foldmethod=marker: */]]
 - [[#extract-html-option-values-from-tag-values][Extract HTML option values from tag values]]
 - [[#increment-by-column-in-xml][increment by column in XML]]
 - [[#sorting-a-glossary][Sorting a glossary]]
@@ -382,7 +371,6 @@ download it to see the missing portions.
 - [[#create-bison-tokens][Create bison tokens]]
 - [[#tiny-column-alignment][Tiny column alignment]]
 - [[#sort-python-functions-and-methods-alphabetically][sort python functions and methods alphabetically]]
-- [[#sort-functions-in-the-python-file-alphabetically--sort-functions-within-a-class-alphabetically--sort-classes-alphabetically][sort functions in the python file alphabetically * sort functions within a Class alphabetically * sort Classes alphabetically]]
 - [[#greek-column-realign][Greek column realign]]
 - [[#remove-hard-line-breaks][Remove hard line breaks]]
 - [[#circle-of-fifths-with-sharps][Circle of Fifths with Sharps]]
@@ -9200,9 +9188,7 @@ Put the contacts and their information in alphabetical order.
 ** End file
 #+BEGIN_SRC 
 ## Directory
-   #+END_SRC
-
-* Allen, Taylor
+   * Allen, Taylor
       - Email: allen.taylor@hotmail.com
    * Bailey, Stephen
       - 4545 Harbor Ln, Atlanta, GA
@@ -9237,6 +9223,8 @@ Put the contacts and their information in alphabetical order.
       - Phone: (294) 984-2938
    * Thomas, Brent
       - 1482 Mystic Oaks, Anaheim, CA
+#+END_SRC
+
 
 * Deleting folded text
 
@@ -10051,9 +10039,7 @@ The text below contains three folds. Delete them (and the text inside them). For
 
 ** End file
 #+BEGIN_SRC 
-/#+END_SRC
-
-* vim: set foldmethod=marker: */
+/* vim: set foldmethod=marker: */
 aoeuaoeu
 679
 196
@@ -10555,6 +10541,7 @@ aoeuaoeu
 079
 506
 584
+#+END_SRC
 
 * Extract HTML option values from tag values
 
@@ -17804,7 +17791,8 @@ Utopia        : 30 items
 
 * sort python functions and methods alphabetically
 
-* sort functions in the python file alphabetically * sort functions within a Class alphabetically * sort Classes alphabetically
+  * sort functions in the python file alphabetically * sort functions within a Class alphabetically * sort Classes alphabetically
+
 ** Start file
 #+BEGIN_SRC 
 @decorator1
@@ -21408,6 +21396,7 @@ end
 
 Turn the x to a +
 
+** Start file
 #+BEGIN_SRC
 \     /
  \   /
@@ -21418,6 +21407,7 @@ Turn the x to a +
 /     \
 #+END_SRC
 
+** End file
 #+BEGIN_SRC
 
    |
@@ -21433,6 +21423,7 @@ Turn the x to a +
 
 Simple challenge to remove all but the post code on each line
 
+** Start file
 #+BEGIN_SRC
 RD 5 Gore 9775
 RD 6 Gore 9776
@@ -21444,6 +21435,7 @@ RD 1 Hamilton 3281
 RD 2 Hamilton 3282
 #+END_SRC
 
+** End file
 #+BEGIN_SRC
 9775
 9776
@@ -21460,6 +21452,7 @@ RD 2 Hamilton 3282
 You just came up with this briliant go vars package. But dang, you forgot to add comments to the exported variables. Can you add a comment over each variable with a TODO-placeholder?
 Start file
 
+** Start file
 #+BEGIN_SRC
 package vars
 
@@ -21469,6 +21462,7 @@ var (
 )
 #+END_SRC
 
+** End file
 #+BEGIN_SRC
 package vars
 
@@ -21484,6 +21478,7 @@ var (
 
 Prepend an asterisk to every non-blank line in the input file.
 
+** Start file
 #+BEGIN_SRC
 This is a
 very short
@@ -21497,6 +21492,7 @@ of
 surpises.
 #+END_SRC
 
+** End file
 #+BEGIN_SRC
 *This is a
 *very short
@@ -21515,6 +21511,7 @@ surpises.
 
 Simply add a semicolon at the end of each line
 
+** Start file
 #+BEGIN_SRC
  super.onCreate(savedInstanceState)
  setContentView(R.layout.activity_second)
@@ -21525,6 +21522,7 @@ Simply add a semicolon at the end of each line
  view.setText(text)  
 #+END_SRC
 
+** End file
 #+BEGIN_SRC
  super.onCreate(savedInstanceState);
  setContentView(R.layout.activity_second);
